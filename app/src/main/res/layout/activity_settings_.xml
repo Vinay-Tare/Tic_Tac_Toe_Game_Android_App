@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#243AB8"
+    android:orientation="vertical"
+    tools:context=".Settings_Activity"
+    android:weightSum="100"
+    android:id="@+id/layout">
+
+    <TextView
+        android:id="@+id/textView_titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:fontFamily="monospace"
+        android:paddingTop="30sp"
+        android:text="Settings/Pause"
+        android:textAlignment="center"
+        android:textColor="#DD2C00"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="15"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:fontFamily="monospace"
+            android:paddingLeft="10sp"
+            android:text="Media Volume :"
+            android:textColor="#00C853"
+            android:textSize="18sp" />
+
+        <SeekBar
+            android:id="@+id/seekBar_Volume"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:progress="100" />
+
+        <ToggleButton
+            android:id="@+id/toggleButton_Sound"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10sp"
+            android:layout_weight="2"
+            android:background="#00C853"
+            android:checked="true"
+            android:drawableLeft="@drawable/ic_baseline_volume_up_24"
+            android:paddingLeft="10sp"
+            android:text="ToggleButton"
+            android:textColor="#FF6D00" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_showCredits"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_marginTop="20sp"
+        android:layout_weight="10"
+        android:background="#FFB300"
+        android:onClick="onShowCredits"
+        android:text="Show Credits"
+        android:textColor="#00695C"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView_credits"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="30"
+        android:paddingTop="20sp"
+        android:text="Credits : \n\n Developer Name : Vinay Tare \n  Version : 1.0.0 \n "
+        android:textAlignment="center"
+        android:textColor="#69F0AE"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/button_Resume"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_marginTop="20sp"
+        android:layout_weight="10"
+        android:background="#64DD17"
+        android:onClick="onGameResume"
+        android:text="Resume/Back"
+        android:textColor="#FF3D00"
+        android:textSize="18sp"
+        android:visibility="visible" />
+</LinearLayout>
